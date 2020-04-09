@@ -10,6 +10,7 @@
 
 <script>
 import Axios from "axios";
+import Product from "@/DTO/product";
 
 export default {
   props: ["id"],
@@ -22,11 +23,27 @@ export default {
   created() {
     Axios.get(process.env.VUE_APP_POSTS_API + "/" + this.id)
       .then(response => {
-        this.event = response.data;
+        this.mapProduct(response);
       })
       .catch(e => {
         console.log(e);
       });
+  },
+  methods: {
+    mapProduct: function(response) {
+      const product = createProduct(response.data);
+      this.event = product;
+    }
   }
 };
+
+function createProduct(product) {
+  const id = product.id;
+  const name = product.name;
+  const price = product.price;
+  const description = product.description;
+  const image = product.image;
+
+  return new Product(id, name, price, description, image);
+}
 </script>

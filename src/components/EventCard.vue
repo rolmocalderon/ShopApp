@@ -23,6 +23,7 @@
 
 <script>
 import Axios from "axios";
+
 export default {
   name: "EventCard",
   data() {
@@ -35,7 +36,7 @@ export default {
   },
   methods: {
     showPost: function(e) {
-      if (e.target.tagName.toLowerCase() === "button") {
+      if (e.target.tagName.toLowerCase() === "button" || e.target.parentNode.tagName.toLowerCase() === "button") {
         e.preventDefault();
         e.stopPropagation();
         this.buyProduct();
@@ -47,7 +48,7 @@ export default {
         id: productId
       })
         .then(response => {
-          console.log(response.data);
+          this.$root.$emit('purchadedSuccessfully', { response: response.data });
         })
         .catch(e => {
           console.log(e);

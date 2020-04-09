@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link :to="{ name: 'event-list' }">List</router-link> |
-      <router-link :to="{ name: 'event-create' }">Create Event</router-link>
-    </div>
+    <headerview />
     <router-view />
   </div>
 </template>
+
+<script>
+import headerview from "./views/Header";
+
+export default {
+  components: {
+    headerview
+  }
+}
+</script>
 
 <style>
 * {
@@ -24,19 +31,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 
 a:link {
