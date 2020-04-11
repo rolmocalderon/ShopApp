@@ -10,7 +10,7 @@
 
 <script>
 import Axios from "axios";
-import Product from "@/DTO/product";
+import Product from "@/DTO/product.js";
 
 export default {
   props: ["id"],

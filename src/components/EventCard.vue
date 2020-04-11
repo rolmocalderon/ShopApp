@@ -36,7 +36,10 @@ export default {
   },
   methods: {
     showPost: function(e) {
-      if (e.target.tagName.toLowerCase() === "button" || e.target.parentNode.tagName.toLowerCase() === "button") {
+      if (
+        e.target.tagName.toLowerCase() === "button" ||
+        e.target.parentNode.tagName.toLowerCase() === "button"
+      ) {
         e.preventDefault();
         e.stopPropagation();
         this.buyProduct();
