@@ -36,9 +36,6 @@ export default {
           this.title = infoResponse.data.title;
         })
       )
-      .catch(e => {
-        console.log(e);
-      });
   }
 };
 </script>

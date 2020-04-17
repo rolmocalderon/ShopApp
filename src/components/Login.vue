@@ -27,7 +27,6 @@ export default {
         username: event.target.username.value,
         password: event.target.password.value
       };
-      console.log(form);
       const options = {
           url: process.env.VUE_APP_USERS_API + "1",
           method: 'GET',

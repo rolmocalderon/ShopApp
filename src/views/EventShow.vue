@@ -25,9 +25,6 @@ export default {
       .then(response => {
         this.mapProduct(response);
       })
-      .catch(e => {
-        console.log(e);
-      });
   },
   methods: {
     mapProduct: function(response) {
