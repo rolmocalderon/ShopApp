@@ -53,9 +53,6 @@ export default {
         .then(response => {
           this.$root.$emit('purchadedSuccessfully', { response: response.data });
         })
-        .catch(e => {
-          console.log(e);
-        });
     }
   }
 };
