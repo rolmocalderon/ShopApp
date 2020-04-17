@@ -23,11 +23,11 @@ export default {
   methods: {
     validateLogin: function(event) {
       event.preventDefault();
-      const form = {
+      /*const form = {
         username: event.target.username.value,
         password: event.target.password.value
       };
-      /*const options = {
+      const options = {
           url: process.env.VUE_APP_USERS_API + "1",
           method: 'GET',
           data: form
