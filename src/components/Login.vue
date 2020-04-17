@@ -17,25 +17,11 @@
 </template>
 
 <script>
-//import Axios from "axios";
 export default {
   name: 'Login',
   methods: {
     validateLogin: function(event) {
       event.preventDefault();
-      /*const form = {
-        username: event.target.username.value,
-        password: event.target.password.value
-      };
-      const options = {
-          url: process.env.VUE_APP_USERS_API + "1",
-          method: 'GET',
-          data: form
-      }
-      Axios(options)
-        .then(result => {
-          console.log(result);
-        })*/
     }
   }
 };
