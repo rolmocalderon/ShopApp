@@ -12,8 +12,8 @@ export default class Product {
       this.price = price;
       this.description = description;
       this.image = image;
-    }else{
-      console.error("Estupido esto no funciona");
+    } else {
+      //console.error("Estupido esto no funciona");
     }
   }
 };
